@@ -104,6 +104,40 @@
         .btn-ghost { background: transparent; color: var(--gold); }
         .btn-ghost:hover { background: var(--gold-soft); }
 
+        button.btn { -webkit-appearance: none; appearance: none; line-height: inherit; }
+        .appt-msg {
+            max-width: 460px; margin: 22px auto 0; padding: 16px 20px;
+            background: var(--gold-soft); border: 1px dashed var(--gold);
+            border-radius: 10px; color: var(--text); font-size: 0.92rem; text-align: left;
+        }
+        .appt-msg[hidden] { display: none; }
+        .appt-msg strong { display: block; color: var(--gold); margin-bottom: 4px; font-weight: 600; }
+
+        /* ---------- Notify form ---------- */
+        .notify-form {
+            max-width: 560px; margin: 0 auto;
+            background: var(--card); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 30px 26px;
+        }
+        .notify-form .fields { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; }
+        .notify-form .field label { display: block; font-size: 0.82rem; color: var(--muted); margin-bottom: 6px; }
+        .notify-form .field input {
+            width: 100%; padding: 12px 14px; font: 500 1rem var(--sans);
+            color: var(--text); background: var(--bg);
+            border: 1px solid var(--border); border-radius: 10px;
+        }
+        .notify-form .field input:focus { outline: 2px solid var(--gold); outline-offset: 1px; border-color: var(--gold); }
+        .notify-form .field input.invalid { border-color: #e5735c; }
+        .consent { display: flex; gap: 10px; align-items: flex-start; margin-top: 18px; font-size: 0.88rem; color: var(--muted); cursor: pointer; }
+        .consent input { margin-top: 4px; accent-color: var(--gold); width: 18px; height: 18px; flex: none; }
+        .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+        .form-status { margin-top: 14px; font-size: 0.92rem; text-align: center; min-height: 1.2em; }
+        .form-status.ok { color: #6fcf97; }
+        .form-status.err { color: #f0a35e; }
+        .privacy { margin-top: 10px; font-size: 0.78rem; color: var(--muted); text-align: center; }
+        .appt-msg a { color: var(--gold); font-weight: 500; }
+        @media (max-width: 640px) { .notify-form .fields { grid-template-columns: 1fr; } }
+
         .launch-note {
             margin-top: 28px; font-size: 0.88rem; color: var(--muted);
         }
@@ -237,6 +271,7 @@
             <li><a href="#services">Services</a></li>
             <li><a href="#pricing">Pricing</a></li>
             <li><a href="#how">How It Works</a></li>
+            <li><a href="#notify">Get Notified</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
@@ -253,10 +288,14 @@
                 Professional, reliable notarizations in Mount Holly, plus mobile service that comes to you anywhere within 50 miles.
             </p>
             <div class="btn-row">
-                <a class="btn btn-primary" href="mailto:info@myncnotary.com?subject=Notary%20Appointment%20Request">Request an Appointment</a>
+                <button type="button" class="btn btn-primary" id="apptBtn" aria-controls="apptMsg" aria-expanded="false">Request an Appointment</button>
                 <a class="btn btn-ghost" href="#pricing">See Pricing</a>
             </div>
-            <p class="launch-note"><strong>Opening winter 2026</strong> &mdash; booking requests are welcome now and will be answered once my North Carolina notary commission is in place.</p>
+            <div class="appt-msg" id="apptMsg" role="status" aria-live="polite" hidden>
+                <strong>Notary signing services begin in Winter 2026.</strong>
+                Appointments are not yet available. Scheduling will open following the issuance of my North Carolina Notary Public commission. Thank you for your interest, and please check back for updates. <a href="#notify">Get notified when appointments open.</a>
+            </div>
+            <p class="launch-note"><strong>Opening winter 2026</strong> &mdash; appointments will open once my North Carolina notary commission is in place.</p>
         </div>
     </div>
 
@@ -372,8 +411,50 @@
         </div>
     </section>
 
+    <!-- GET NOTIFIED -->
+    <section id="notify" class="alt">
+        <div class="wrap">
+            <p class="eyebrow">Stay Informed</p>
+            <h2>Get Notified at Launch</h2>
+            <p class="section-sub">Leave your contact information and I'll reach out as soon as notary appointments open.</p>
+
+            <form class="notify-form" id="notifyForm" action="https://formspree.io/f/mnppykod" method="POST" novalidate>
+                <div class="fields">
+                    <div class="field">
+                        <label for="nName">Full name</label>
+                        <input id="nName" name="name" type="text" autocomplete="name" required maxlength="100">
+                    </div>
+                    <div class="field">
+                        <label for="nEmail">Email address</label>
+                        <input id="nEmail" name="email" type="email" autocomplete="email" required maxlength="150">
+                    </div>
+                </div>
+                <div class="field" style="margin-top:16px;">
+                    <label for="nPhone">Mobile phone <span style="opacity:.7">(optional)</span></label>
+                    <input id="nPhone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="30">
+                </div>
+
+                <!-- Spam trap: real visitors never see or fill this -->
+                <div class="hp" aria-hidden="true">
+                    <label for="nCompany">Leave this field empty</label>
+                    <input id="nCompany" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+                </div>
+
+                <label class="consent">
+                    <input type="checkbox" id="nConsent" name="consent" required>
+                    <span>I agree to be contacted by MyNCNotary.com about the launch of notary services.</span>
+                </label>
+
+                <button type="submit" class="btn btn-primary" id="nSubmit" style="width:100%;margin-top:18px;">Notify Me</button>
+
+                <p class="form-status" id="nStatus" role="status" aria-live="polite"></p>
+                <p class="privacy">Your information is used only to notify you about the launch of services. It will never be sold or shared.</p>
+            </form>
+        </div>
+    </section>
+
     <!-- CONTACT -->
-    <section id="contact" class="alt">
+    <section id="contact">
         <div class="wrap">
             <p class="eyebrow">Contact</p>
             <h2>Book Your Appointment</h2>
@@ -401,6 +482,78 @@
 </footer>
 
 <script>
+    (function () {
+        // Formspree endpoint for the "Get Notified" form.
+        // If this is ever left empty, the form falls back to opening an email draft.
+        var FORM_ENDPOINT = 'https://formspree.io/f/mnppykod';
+        var FALLBACK_EMAIL = 'info@myncnotary.com';
+
+        var form = document.getElementById('notifyForm');
+        var statusEl = document.getElementById('nStatus');
+        var submitBtn = document.getElementById('nSubmit');
+        var nName = document.getElementById('nName');
+        var nEmail = document.getElementById('nEmail');
+        var nConsent = document.getElementById('nConsent');
+
+        function setStatus(text, cls) { statusEl.textContent = text; statusEl.className = 'form-status ' + (cls || ''); }
+        function done() {
+            form.reset();
+            setStatus('Thank you! You\u2019re on the list, and I\u2019ll be in touch when appointments open.', 'ok');
+        }
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            [nName, nEmail].forEach(function (i) { i.classList.remove('invalid'); });
+
+            var name = nName.value.trim();
+            var email = nEmail.value.trim();
+            var phone = document.getElementById('nPhone').value.trim();
+            var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
+
+            if (!name) { nName.classList.add('invalid'); nName.focus(); setStatus('Please enter your name.', 'err'); return; }
+            if (!emailOk) { nEmail.classList.add('invalid'); nEmail.focus(); setStatus('Please enter a valid email address.', 'err'); return; }
+            if (!nConsent.checked) { setStatus('Please check the box to confirm you agree to be contacted.', 'err'); return; }
+
+            // Honeypot: bots fill this; pretend success and discard
+            if (document.getElementById('nCompany').value) { done(); return; }
+
+            if (!FORM_ENDPOINT) {
+                var body = 'Please notify me when notary appointments open.\n\nName: ' + name +
+                    '\nEmail: ' + email + (phone ? '\nPhone: ' + phone : '');
+                window.location.href = 'mailto:' + FALLBACK_EMAIL +
+                    '?subject=' + encodeURIComponent('Notify Me: Notary Launch') +
+                    '&body=' + encodeURIComponent(body);
+                setStatus('Your email app should open with a pre-filled message. Just press send.', 'ok');
+                return;
+            }
+
+            submitBtn.disabled = true;
+            setStatus('Sending\u2026');
+            var data = new FormData();
+            data.append('name', name);
+            data.append('email', email);
+            data.append('phone', phone);
+            data.append('consent', 'Agreed to be contacted about launch');
+            data.append('_subject', 'New launch notification signup');
+
+            fetch(FORM_ENDPOINT, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
+                .then(function (r) { if (!r.ok) { throw new Error('bad response'); } done(); })
+                .catch(function () {
+                    setStatus('Sorry, something went wrong. Please email ' + FALLBACK_EMAIL + ' or try again.', 'err');
+                })
+                .then(function () { submitBtn.disabled = false; });
+        });
+    })();
+
+    (function () {
+        var btn = document.getElementById('apptBtn');
+        var msg = document.getElementById('apptMsg');
+        btn.addEventListener('click', function () {
+            msg.hidden = false;
+            btn.setAttribute('aria-expanded', 'true');
+        });
+    })();
+
     (function () {
         var RATE = 0.76, FEE = 10, MAX = 50;
         var miles = document.getElementById('miles');
