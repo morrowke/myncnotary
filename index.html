@@ -228,6 +228,12 @@
         }
         .estimator h3 { text-align: center; font-family: var(--serif); font-size: 1.4rem; margin-bottom: 4px; }
         .estimator .sub { text-align: center; color: var(--muted); font-size: 0.9rem; margin-bottom: 22px; }
+        .nc-note {
+            margin: -8px 0 22px; padding: 10px 14px; border-radius: 10px;
+            background: var(--gold-soft); border: 1px solid var(--gold);
+            color: var(--text); font-size: 0.86rem; text-align: center;
+        }
+        .nc-note strong { color: var(--gold); font-weight: 600; }
         .fields { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; }
         .field label { display: block; font-size: 0.82rem; color: var(--muted); margin-bottom: 6px; }
         .field input {
@@ -372,7 +378,7 @@
         <div class="wrap">
             <p class="eyebrow">Coverage</p>
             <h2>Areas Serviced</h2>
-            <p class="section-sub">Based in Mount Holly, North Carolina, mobile notary services are available anywhere within a 50-mile radius in NC.</p>
+            <p class="section-sub">Based in Mount Holly, North Carolina, mobile notary services are available within a 50-mile radius for signings located in North Carolina only. Services are not available in South Carolina or other states.</p>
 
             <div class="area-cards">
                 <div class="area-card">
@@ -439,13 +445,14 @@
                 <div class="price-card">
                     <div class="price">$0.76<small> / mile</small></div>
                     <h3>Mobile Travel Fee</h3>
-                    <p>Charged on roundtrip mileage from Mount Holly, NC. Service area: up to 50 miles within NC.</p>
+                    <p>Charged on roundtrip mileage from Mount Holly, NC. Service area: up to 50 miles, with the signing location in North Carolina.</p>
                 </div>
             </div>
 
             <div class="estimator" aria-labelledby="est-title">
                 <h3 id="est-title">Estimate Your Mobile Visit</h3>
                 <p class="sub">Enter your distance from Mount Holly and the number of signatures.</p>
+                <p class="nc-note"><strong>North Carolina only.</strong> The signing must take place in North Carolina. Notarizations cannot be performed in South Carolina or any other state, even if the address is within 50 miles of Mount Holly.</p>
 
                 <div class="fields">
                     <div class="field">
@@ -461,7 +468,7 @@
                 <div class="result" aria-live="polite">
                     <div class="total" id="total">$32.80</div>
                     <div class="break" id="break"></div>
-                    <div class="warn" id="warn" hidden>That's outside the 50-mile NC service area. Please get in touch to discuss options.</div>
+                    <div class="warn" id="warn" hidden>That's outside the 50-mile service area. Please get in touch to discuss options. (Signings must take place in North Carolina.)</div>
                 </div>
             </div>
         </div>
@@ -494,7 +501,7 @@
             </div>
 
             <p class="notice">
-                Please bring your document unsigned and complete. North Carolina notaries cannot give legal advice, choose the type of notarization for you, or prepare legal documents.
+                All signings must take place in North Carolina; services are not available in South Carolina or other states. Please bring your document unsigned and complete. North Carolina notaries cannot give legal advice, choose the type of notarization for you, or prepare legal documents.
             </p>
         </div>
     </section>
