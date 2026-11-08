@@ -6,6 +6,7 @@
     <title>MyNCNotary.com | Notary Services in Mount Holly, NC | Opening Soon</title>
     <meta name="description" content="Notary public services based in Mount Holly, NC. In-office and mobile notary service within 50 miles in North Carolina. Flat $10 per signature. Opening winter 2026.">
     <meta name="theme-color" content="#0b1220">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta property="og:title" content="MyNCNotary.com | Notary Services in Mount Holly, NC">
     <meta property="og:description" content="Traditional and mobile notary services within 50 miles of Mount Holly, NC. Opening soon.">
     <meta property="og:type" content="website">
@@ -659,6 +660,17 @@
         function startMap() {
             if (started || typeof L === 'undefined') { return; }
             started = true;
+            var original = el.innerHTML;
+            try {
+                buildMap();
+            } catch (err) {
+                // If anything goes wrong, put the static image back
+                el.className = '';
+                el.innerHTML = original;
+            }
+        }
+
+        function buildMap() {
 
             var home = [35.2979, -81.0159]; // Mount Holly, NC
             var MILE = 1609.34;
@@ -691,7 +703,7 @@
                 radius: 8, color: '#1a1405', weight: 2, fillColor: '#d4af37', fillOpacity: 1
             }).addTo(map).bindTooltip('Mount Holly, NC (home base)', { permanent: false });
 
-            map.fitBounds(outer.getBounds(), { padding: [10, 10] });
+            map.fitBounds(L.latLng(home).toBounds(100 * MILE), { padding: [10, 10] });
 
             // Desktop: click the map to enable scroll-wheel zoom, leave it to restore normal page scrolling
             map.on('click', function () { map.scrollWheelZoom.enable(); });
