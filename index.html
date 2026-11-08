@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyNCNotary.com | Notary Services in Mount Holly, NC | Opening Soon</title>
-    <meta name="description" content="Notary public services based in Mount Holly, NC. In-office and mobile notary service within 50 miles. Flat $10 per signature. Opening winter 2026.">
+    <meta name="description" content="Notary public services based in Mount Holly, NC. In-office and mobile notary service within 50 miles in North Carolina. Flat $10 per signature. Opening winter 2026.">
     <meta name="theme-color" content="#0b1220">
     <meta property="og:title" content="MyNCNotary.com | Notary Services in Mount Holly, NC">
     <meta property="og:description" content="Traditional and mobile notary services within 50 miles of Mount Holly, NC. Opening soon.">
@@ -187,6 +187,20 @@
             color: var(--gold); border: 1px solid var(--border); border-radius: 999px; padding: 4px 12px;
         }
 
+        /* ---------- Areas Serviced ---------- */
+        .area-cards { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+        .area-card {
+            background: var(--card); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 28px 26px;
+        }
+        .area-card h3 { font-size: 1.15rem; margin-bottom: 12px; color: var(--gold); font-family: var(--serif); }
+        .area-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+        .area-chip {
+            font-size: 0.85rem; background: var(--bg); color: var(--text);
+            border: 1px solid var(--border); border-radius: 6px; padding: 4px 10px;
+        }
+        .area-chip.highlight { border-color: var(--gold); color: var(--gold); font-weight: 500; }
+
         /* ---------- Pricing ---------- */
         .pricing { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin-bottom: 36px; }
         .price-card {
@@ -278,6 +292,7 @@
         <a href="#top" class="logo">MyNC<span>Notary</span>.com</a>
         <ul class="nav-links">
             <li><a href="#services">Services</a></li>
+            <li><a href="#areas">Areas Serviced</a></li>
             <li><a href="#pricing">Pricing</a></li>
             <li><a href="#how">How It Works</a></li>
             <li><a href="#notify">Get Notified</a></li>
@@ -294,7 +309,7 @@
             <div class="badge">Mount Holly, North Carolina</div>
             <h1>Trusted Notary Services,<br><span>Right Where You Need Them</span></h1>
             <p class="lead">
-                Professional, reliable notarizations in Mount Holly, plus mobile service that comes to you anywhere within 50 miles.
+                Professional, reliable notarizations in Mount Holly, plus mobile service that comes to you anywhere within 50 miles in North Carolina.
                 <span class="byline">Owned and operated by <strong>Kevin Morrow, II</strong></span>
             </p>
             <div class="btn-row">
@@ -303,7 +318,7 @@
             </div>
             <div class="appt-msg" id="apptMsg" role="status" aria-live="polite" hidden>
                 <strong>Notary signing services begin in Winter 2026.</strong>
-                Appointments are not yet available. Scheduling will open once the North Carolina Notary Public commission has been  issued. Thank you for your interest, and please check back for updates. <a href="#notify">Get notified when appointments open.</a>
+                Appointments are not yet available. Scheduling will open once the North Carolina Notary Public commission has been issued. Thank you for your interest, and please check back for updates. <a href="#notify">Get notified when appointments open.</a>
             </div>
             <p class="launch-note"><strong>Opening winter 2026</strong> &mdash; appointments will open once the North Carolina Notary Public commission has been issued.</p>
         </div>
@@ -330,7 +345,7 @@
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
                     </div>
                     <h3>Mobile Notary</h3>
-                    <p>We travel to you within 50 miles of Mount Holly. Ideal for homebound clients, busy schedules, and off-hours signings.</p>
+                    <p>We travel to you within 50 miles of Mount Holly across North Carolina. Ideal for homebound clients, busy schedules, and off-hours signings.</p>
                 </div>
 
                 <div class="card">
@@ -345,8 +360,58 @@
         </div>
     </section>
 
+    <!-- AREAS SERVICED -->
+    <section id="areas" class="alt">
+        <div class="wrap">
+            <p class="eyebrow">Coverage</p>
+            <h2>Areas Serviced</h2>
+            <p class="section-sub">Based in Mount Holly, North Carolina, mobile notary services are available anywhere within a 50-mile radius in NC.</p>
+
+            <div class="area-cards">
+                <div class="area-card">
+                    <h3>North Carolina Counties</h3>
+                    <p style="color: var(--muted); font-size: 0.92rem;">Mobile travel coverage includes the following NC counties within 50 miles:</p>
+                    <div class="area-tags">
+                        <span class="area-chip highlight">Gaston County</span>
+                        <span class="area-chip highlight">Mecklenburg County</span>
+                        <span class="area-chip highlight">Lincoln County</span>
+                        <span class="area-chip">Cabarrus County</span>
+                        <span class="area-chip">Union County</span>
+                        <span class="area-chip">Iredell County</span>
+                        <span class="area-chip">Catawba County</span>
+                        <span class="area-chip">Cleveland County</span>
+                        <span class="area-chip">Rowan County</span>
+                    </div>
+                </div>
+
+                <div class="area-card">
+                    <h3>Major NC Cities &amp; Towns</h3>
+                    <p style="color: var(--muted); font-size: 0.92rem;">Including but not limited to:</p>
+                    <div class="area-tags">
+                        <span class="area-chip highlight">Mount Holly</span>
+                        <span class="area-chip highlight">Charlotte</span>
+                        <span class="area-chip highlight">Gastonia</span>
+                        <span class="area-chip">Belmont</span>
+                        <span class="area-chip">Huntersville</span>
+                        <span class="area-chip">Cornelius</span>
+                        <span class="area-chip">Davidson</span>
+                        <span class="area-chip">Mooresville</span>
+                        <span class="area-chip">Lincolnton</span>
+                        <span class="area-chip">Denver</span>
+                        <span class="area-chip">Concord</span>
+                        <span class="area-chip">Kannapolis</span>
+                        <span class="area-chip">Matthews</span>
+                        <span class="area-chip">Monroe</span>
+                        <span class="area-chip">Shelby</span>
+                        <span class="area-chip">Statesville</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- PRICING -->
-    <section id="pricing" class="alt">
+    <section id="pricing">
         <div class="wrap">
             <p class="eyebrow">Pricing</p>
             <h2>Simple, Transparent Rates</h2>
@@ -361,7 +426,7 @@
                 <div class="price-card">
                     <div class="price">$0.76<small> / mile</small></div>
                     <h3>Mobile Travel Fee</h3>
-                    <p>Charged on roundtrip mileage from Mount Holly, NC. Service area: up to 50 miles.</p>
+                    <p>Charged on roundtrip mileage from Mount Holly, NC. Service area: up to 50 miles within NC.</p>
                 </div>
             </div>
 
@@ -383,14 +448,14 @@
                 <div class="result" aria-live="polite">
                     <div class="total" id="total">$32.80</div>
                     <div class="break" id="break"></div>
-                    <div class="warn" id="warn" hidden>That's outside the 50-mile service area. Please get in touch to discuss options.</div>
+                    <div class="warn" id="warn" hidden>That's outside the 50-mile NC service area. Please get in touch to discuss options.</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- HOW IT WORKS -->
-    <section id="how">
+    <section id="how" class="alt">
         <div class="wrap">
             <p class="eyebrow">How It Works</p>
             <h2>Getting Notarized Is Easy</h2>
@@ -422,7 +487,7 @@
     </section>
 
     <!-- GET NOTIFIED -->
-    <section id="notify" class="alt">
+    <section id="notify">
         <div class="wrap">
             <p class="eyebrow">Stay Informed</p>
             <h2>Get Notified at Launch</h2>
@@ -464,7 +529,7 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact">
+    <section id="contact" class="alt">
         <div class="wrap">
             <p class="eyebrow">Appointments</p>
             <h2>Booking Opens Winter 2026</h2>
