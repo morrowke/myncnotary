@@ -251,6 +251,23 @@
         .result .break { font-size: 0.85rem; color: var(--muted); margin-top: 4px; }
         .result .warn { color: #f0a35e; font-size: 0.88rem; margin-top: 8px; }
 
+        /* ---------- Payment ---------- */
+        .payment {
+            max-width: 640px; margin: 36px auto 0; text-align: center;
+            background: var(--card); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 30px 26px;
+        }
+        .payment h3 { font-family: var(--serif); font-size: 1.4rem; margin-bottom: 4px; }
+        .payment .sub { color: var(--muted); font-size: 0.9rem; margin-bottom: 14px; }
+        .pay-tags { justify-content: center; margin: 0 0 24px; }
+        .pay-list { list-style: none; text-align: left; display: grid; gap: 12px; }
+        .pay-list li { position: relative; padding-left: 18px; color: var(--muted); font-size: 0.92rem; }
+        .pay-list li::before {
+            content: ''; position: absolute; left: 0; top: 0.6em;
+            width: 6px; height: 6px; border-radius: 50%; background: var(--gold);
+        }
+        .pay-list strong { color: var(--text); font-weight: 500; }
+
         /* ---------- Steps ---------- */
         .steps { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); counter-reset: s; }
         .step { position: relative; padding: 26px 22px 22px; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); }
@@ -440,18 +457,18 @@
                 <div class="price-card featured">
                     <div class="price">$10<small> / signature</small></div>
                     <h3>Notarization Fee</h3>
-                    <p>Flat rate for every notarized signature, for both in-office and mobile appointments.</p>
+                    <p>Flat rate for every notarized signature, for both in-office and mobile appointments. Due at the time of signing.</p>
                 </div>
                 <div class="price-card">
                     <div class="price">$0.76<small> / mile</small></div>
                     <h3>Mobile Travel Fee</h3>
-                    <p>Charged on roundtrip mileage from Mount Holly, NC. Service area: up to 50 miles, with the signing location in North Carolina.</p>
+                    <p>Charged on roundtrip mileage from Mount Holly, NC. Service area: up to 50 miles, with the signing location in North Carolina. Paid in advance to confirm your appointment.</p>
                 </div>
             </div>
 
             <div class="estimator" aria-labelledby="est-title">
                 <h3 id="est-title">Estimate Your Mobile Visit</h3>
-                <p class="sub">Enter your distance from Mount Holly and the number of signatures.</p>
+                <p class="sub">Enter your distance from Mount Holly and the number of signatures. The travel fee is paid in advance to confirm a mobile appointment.</p>
                 <p class="nc-note"><strong>North Carolina only.</strong> The signing must take place in North Carolina. Notarizations cannot be performed in South Carolina or any other state, even if the address is within 50 miles of Mount Holly.</p>
 
                 <div class="fields">
@@ -471,6 +488,24 @@
                     <div class="warn" id="warn" hidden>That's outside the 50-mile service area. Please get in touch to discuss options. (Signings must take place in North Carolina.)</div>
                 </div>
             </div>
+
+            <div class="payment" id="payment">
+                <h3>Payment Methods &amp; Policy</h3>
+                <p class="sub">Accepted payment methods</p>
+                <div class="area-tags pay-tags">
+                    <span class="area-chip highlight">ApplePay</span>
+                    <span class="area-chip highlight">CashApp</span>
+                    <span class="area-chip highlight">PayPal</span>
+                    <span class="area-chip highlight">Venmo</span>
+                    <span class="area-chip highlight">Zelle</span>
+                </div>
+                <ul class="pay-list">
+                    <li><strong>Notarization fee.</strong> The $10 per signature fee is due at the time of signing, for both in-office and mobile appointments.</li>
+                    <li><strong>Travel fee (mobile appointments).</strong> The $0.76 per roundtrip mile travel fee must be paid in advance to confirm your appointment.</li>
+                    <li><strong>Payment details.</strong> Payment instructions are sent with your appointment confirmation.</li>
+                    <li><strong>Please note.</strong> Cash is accepted for signing services only. Travel fees must be paid via other acceptable means in advance.</li>
+                </ul>
+            </div>
         </div>
     </section>
 
@@ -488,7 +523,7 @@
                 </div>
                 <div class="step">
                     <h3>Confirm Details</h3>
-                    <p>You'll receive a confirmation and a total cost estimate before the appointment.</p>
+                    <p>You'll receive a confirmation and a total cost estimate. For mobile appointments, the travel fee is paid in advance to confirm.</p>
                 </div>
                 <div class="step">
                     <h3>Bring Valid ID</h3>
@@ -496,7 +531,7 @@
                 </div>
                 <div class="step">
                     <h3>Sign &amp; Done</h3>
-                    <p>Sign in front of the notary, and your document is notarized on the spot.</p>
+                    <p>Sign in front of the notary, pay the notarization fee, and your document is notarized on the spot.</p>
                 </div>
             </div>
 
