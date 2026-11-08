@@ -138,6 +138,15 @@
         .appt-msg a { color: var(--gold); font-weight: 500; }
         @media (max-width: 640px) { .notify-form .fields { grid-template-columns: 1fr; } }
 
+        .byline { display: block; margin-top: 14px; font-size: 0.95rem; color: var(--muted); }
+        .byline strong { color: var(--gold); font-family: var(--serif); font-weight: 600; font-size: 1.05rem; }
+
+        .general-contact { max-width: 620px; margin: 28px auto 0; text-align: center; color: var(--muted); font-size: 0.95rem; }
+        .general-contact a { color: var(--gold); text-decoration: none; font-weight: 500; }
+        .general-contact a:hover { text-decoration: underline; }
+        .general-contact p + p { margin-top: 4px; }
+        .general-contact .small { font-size: 0.82rem; margin-top: 10px; }
+
         .launch-note {
             margin-top: 28px; font-size: 0.88rem; color: var(--muted);
         }
@@ -286,6 +295,7 @@
             <h1>Trusted Notary Services,<br><span>Right Where You Need Them</span></h1>
             <p class="lead">
                 Professional, reliable notarizations in Mount Holly, plus mobile service that comes to you anywhere within 50 miles.
+                <span class="byline">Owned and operated by <strong>Kevin Morrow, II</strong></span>
             </p>
             <div class="btn-row">
                 <button type="button" class="btn btn-primary" id="apptBtn" aria-controls="apptMsg" aria-expanded="false">Request an Appointment</button>
@@ -456,17 +466,22 @@
     <!-- CONTACT -->
     <section id="contact">
         <div class="wrap">
-            <p class="eyebrow">Contact</p>
-            <h2>Book Your Appointment</h2>
-            <p class="section-sub">Questions or ready to schedule? Call, text, or email and you'll get a prompt reply.</p>
+            <p class="eyebrow">Appointments</p>
+            <h2>Booking Opens Winter 2026</h2>
+            <p class="section-sub">Appointment booking is coming soon and is not yet available. Notary appointments will open once my North Carolina Notary Public commission has been issued.</p>
 
             <div class="contact-box">
-                <p>Inquiries &amp; Booking Requests</p>
-                <div class="btn-row">
-                    <a class="btn btn-primary" href="tel:+19802913713">Call or Text (980) 291-3713</a>
-                    <a class="btn btn-ghost" href="mailto:info@myncnotary.com?subject=Notary%20Appointment%20Request">Email Us</a>
-                </div>
-                <a class="contact-email" href="mailto:info@myncnotary.com">info@myncnotary.com</a>
+                <p>Want to be first to know when appointments open? Sign up for a launch notification and I'll contact you as soon as booking begins.</p>
+                <a class="btn btn-primary" href="#notify">Get Notified at Launch</a>
+            </div>
+
+            <div class="general-contact">
+                <p>General questions in the meantime?</p>
+                <p>
+                    <a href="tel:+19802913713">(980) 291-3713</a> &bull;
+                    <a href="mailto:info@myncnotary.com?subject=General%20Question">info@myncnotary.com</a>
+                </p>
+                <p class="small">Please note that appointments cannot be scheduled until services begin.</p>
             </div>
         </div>
     </section>
@@ -476,6 +491,7 @@
 <footer>
     <div class="wrap">
         <p><a href="tel:+19802913713" style="text-decoration:none;color:var(--gold)">(980) 291-3713</a> &bull; <a href="mailto:info@myncnotary.com" style="text-decoration:none;color:var(--gold)">info@myncnotary.com</a></p>
+        <p>Owned and operated by Kevin Morrow, II</p>
         <p>&copy; 2026 MyNCNotary.com &bull; Mount Holly, North Carolina &bull; All Rights Reserved</p>
         <p>Notary services provided by a North Carolina Notary Public. Not a law firm; no legal advice provided.</p>
     </div>
