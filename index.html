@@ -188,7 +188,7 @@
         }
 
         /* ---------- Areas Serviced ---------- */
-        .area-cards { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+        .area-cards { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-bottom: 30px; }
         .area-card {
             background: var(--card); border: 1px solid var(--border);
             border-radius: var(--radius); padding: 28px 26px;
@@ -200,6 +200,13 @@
             border: 1px solid var(--border); border-radius: 6px; padding: 4px 10px;
         }
         .area-chip.highlight { border-color: var(--gold); color: var(--gold); font-weight: 500; }
+        
+        .map-wrapper {
+            background: var(--card); border: 1px solid var(--border);
+            border-radius: var(--radius); overflow: hidden; text-align: center;
+        }
+        .map-wrapper img { width: 100%; height: auto; display: block; }
+        .map-caption { padding: 12px 16px; font-size: 0.85rem; color: var(--muted); border-top: 1px solid var(--border); }
 
         /* ---------- Pricing ---------- */
         .pricing { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin-bottom: 36px; }
@@ -406,6 +413,12 @@
                         <span class="area-chip">Statesville</span>
                     </div>
                 </div>
+            </div>
+
+            <!-- Service Area Map Graphic -->
+            <div class="map-wrapper">
+                <img src="service_area.png" alt="Map graphic showing the 50-mile North Carolina mobile notary service area around Mount Holly">
+                <div class="map-caption">50-Mile North Carolina Mobile Notary Service Area centered in Mount Holly, NC</div>
             </div>
         </div>
     </section>
