@@ -42,108 +42,33 @@
     "addressCountry": "US"
   },
   "areaServed": [
-    {
-      "@type": "City",
-      "name": "Mount Holly, NC"
-    },
-    {
-      "@type": "City",
-      "name": "Charlotte, NC"
-    },
-    {
-      "@type": "City",
-      "name": "Gastonia, NC"
-    },
-    {
-      "@type": "City",
-      "name": "Belmont, NC"
-    },
-    {
-      "@type": "City",
-      "name": "Huntersville, NC"
-    },
-    {
-      "@type": "City",
-      "name": "Cornelius, NC"
-    },
-    {
-      "@type": "City",
-      "name": "Davidson, NC"
-    },
-    {
-      "@type": "City",
-      "name": "Mooresville, NC"
-    },
-    {
-      "@type": "City",
-      "name": "Lincolnton, NC"
-    },
-    {
-      "@type": "City",
-      "name": "Denver, NC"
-    },
-    {
-      "@type": "City",
-      "name": "Concord, NC"
-    },
-    {
-      "@type": "City",
-      "name": "Kannapolis, NC"
-    },
-    {
-      "@type": "City",
-      "name": "Matthews, NC"
-    },
-    {
-      "@type": "City",
-      "name": "Monroe, NC"
-    },
-    {
-      "@type": "City",
-      "name": "Shelby, NC"
-    },
-    {
-      "@type": "City",
-      "name": "Statesville, NC"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Gaston County, NC"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Mecklenburg County, NC"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Lincoln County, NC"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Cabarrus County, NC"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Union County, NC"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Iredell County, NC"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Catawba County, NC"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Cleveland County, NC"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Rowan County, NC"
-    }
+    { "@type": "City", "name": "Mount Holly, NC" },
+    { "@type": "City", "name": "Charlotte, NC" },
+    { "@type": "City", "name": "Gastonia, NC" },
+    { "@type": "City", "name": "Belmont, NC" },
+    { "@type": "City", "name": "Huntersville, NC" },
+    { "@type": "City", "name": "Cornelius, NC" },
+    { "@type": "City", "name": "Davidson, NC" },
+    { "@type": "City", "name": "Mooresville, NC" },
+    { "@type": "City", "name": "Lincolnton, NC" },
+    { "@type": "City", "name": "Denver, NC" },
+    { "@type": "City", "name": "Concord, NC" },
+    { "@type": "City", "name": "Kannapolis, NC" },
+    { "@type": "City", "name": "Matthews, NC" },
+    { "@type": "City", "name": "Monroe, NC" },
+    { "@type": "City", "name": "Shelby, NC" },
+    { "@type": "City", "name": "Statesville, NC" },
+    { "@type": "AdministrativeArea", "name": "Gaston County, NC" },
+    { "@type": "AdministrativeArea", "name": "Mecklenburg County, NC" },
+    { "@type": "AdministrativeArea", "name": "Lincoln County, NC" },
+    { "@type": "AdministrativeArea", "name": "Cabarrus County, NC" },
+    { "@type": "AdministrativeArea", "name": "Union County, NC" },
+    { "@type": "AdministrativeArea", "name": "Iredell County, NC" },
+    { "@type": "AdministrativeArea", "name": "Catawba County, NC" },
+    { "@type": "AdministrativeArea", "name": "Cleveland County, NC" },
+    { "@type": "AdministrativeArea", "name": "Rowan County, NC" }
   ],
-  "priceRange": "$",
+  "priceRange": "$$",
   "paymentAccepted": "PayPal, Venmo, Cash App, Zelle",
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -153,8 +78,8 @@
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Mobile Notary Public",
-          "description": "A notary travels to the client within 50 miles of Mount Holly, NC. $10 per signature plus $0.76 per roundtrip mile."
+          "name": "General Notarizations",
+          "description": "In-office notarizations in Mount Holly, NC. Covers Acknowledgments, Jurats, Oaths, Affidavits, and standard acts."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -167,14 +92,39 @@
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "In-Office Notary Public",
-          "description": "In-person notarizations by appointment in Mount Holly, NC."
+          "name": "Mobile Travel Fee (Gaston County)",
+          "description": "Flat convenience travel fee for mobile appointments in Gaston County, NC."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
-          "price": "10.00",
-          "priceCurrency": "USD",
-          "unitText": "per signature"
+          "price": "45.00",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Extended Travel Fee (Outside Gaston County)",
+          "description": "Flat travel fee for mobile appointments outside Gaston County within 50 miles of Mount Holly, NC."
+        },
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "65.00",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Specialty Mobile Visits",
+          "description": "Mobile visits to hospitals, medical facilities, or jails. Includes travel and standard document execution."
+        },
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "125.00",
+          "priceCurrency": "USD"
         }
       }
     ]
@@ -376,47 +326,40 @@
         .map-caption { padding: 12px 16px; font-size: 0.85rem; color: var(--muted); border-top: 1px solid var(--border); }
 
         /* ---------- Pricing ---------- */
-        .pricing { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin-bottom: 36px; }
-        .price-card {
-            background: var(--card); border: 1px solid var(--border);
-            border-radius: var(--radius); padding: 30px 26px; text-align: center;
+        .pricing-hero {
+            background: var(--card); border: 1px solid var(--gold);
+            border-radius: var(--radius); padding: 32px 28px; text-align: center;
+            box-shadow: 0 0 0 1px var(--gold-soft), 0 12px 30px rgba(0,0,0,0.35);
+            margin-bottom: 24px;
         }
-        .price-card.featured { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold-soft), 0 12px 30px rgba(0,0,0,0.35); }
-        .price { font-family: var(--serif); font-size: 2.8rem; color: var(--gold); font-weight: 600; line-height: 1.1; }
-        .price small { font-family: var(--sans); font-size: 0.9rem; color: var(--muted); font-weight: 400; }
-        .price-card h3 { margin: 10px 0 8px; font-size: 1.05rem; }
-        .price-card p { color: var(--muted); font-size: 0.92rem; }
+        .pricing-hero .price { font-family: var(--serif); font-size: 3.2rem; color: var(--gold); font-weight: 600; line-height: 1; }
+        .pricing-hero .price small { font-family: var(--sans); font-size: 1rem; color: var(--muted); font-weight: 400; }
+        .pricing-hero h3 { margin: 12px 0 6px; font-size: 1.25rem; font-family: var(--serif); }
+        .pricing-hero p { color: var(--muted); font-size: 0.95rem; max-width: 600px; margin: 0 auto; }
 
-        /* ---------- Estimator ---------- */
-        .estimator {
+        .pricing-grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-bottom: 24px; }
+        .pricing-card {
             background: var(--card); border: 1px solid var(--border);
-            border-radius: var(--radius); padding: 30px 26px;
-            max-width: 640px; margin: 0 auto;
+            border-radius: var(--radius); padding: 26px 22px;
         }
-        .estimator h3 { text-align: center; font-family: var(--serif); font-size: 1.4rem; margin-bottom: 4px; }
-        .estimator .sub { text-align: center; color: var(--muted); font-size: 0.9rem; margin-bottom: 22px; }
+        .pricing-card h4 { font-size: 1.05rem; font-weight: 600; margin-bottom: 6px; }
+        .pricing-card .fee { font-family: var(--serif); font-size: 1.8rem; color: var(--gold); font-weight: 600; margin-bottom: 8px; }
+        .pricing-card p { color: var(--muted); font-size: 0.9rem; }
+
+        .pricing-notice {
+            max-width: 760px; margin: 0 auto; text-align: center;
+            padding: 16px 20px; background: var(--gold-soft);
+            border: 1px dashed var(--gold); border-radius: 10px;
+            color: var(--text); font-size: 0.92rem;
+        }
+        .pricing-notice strong { color: var(--gold); }
+
         .nc-note {
-            margin: -8px 0 22px; padding: 10px 14px; border-radius: 10px;
+            margin: 24px 0 0; padding: 10px 14px; border-radius: 10px;
             background: var(--gold-soft); border: 1px solid var(--gold);
             color: var(--text); font-size: 0.86rem; text-align: center;
         }
         .nc-note strong { color: var(--gold); font-weight: 600; }
-        .fields { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; }
-        .field label { display: block; font-size: 0.82rem; color: var(--muted); margin-bottom: 6px; }
-        .field input {
-            width: 100%; padding: 12px 14px; font: 500 1rem var(--sans);
-            color: var(--text); background: var(--bg);
-            border: 1px solid var(--border); border-radius: 10px;
-        }
-        .field input:focus { outline: 2px solid var(--gold); outline-offset: 1px; border-color: var(--gold); }
-        .result {
-            margin-top: 22px; padding: 18px; border-radius: 10px;
-            background: var(--gold-soft); border: 1px dashed var(--gold);
-            text-align: center;
-        }
-        .result .total { font-family: var(--serif); font-size: 2.2rem; color: var(--gold); font-weight: 600; }
-        .result .break { font-size: 0.85rem; color: var(--muted); margin-top: 4px; }
-        .result .warn { color: #f0a35e; font-size: 0.88rem; margin-top: 8px; }
 
         [hidden] { display: none !important; }
 
@@ -565,10 +508,10 @@
                 <a class="btn btn-ghost" href="#pricing">See Pricing</a>
             </div>
             <div class="appt-msg" id="apptMsg" role="status" aria-live="polite" hidden>
-                <strong>Notary signing services begin in Winter 2026.</strong>
-                Appointments are not yet available. Scheduling will open once the North Carolina Notary Public commission has been issued. Thank you for your interest, and please check back for updates. <a href="#notify">Get notified when appointments open.</a>
+                <strong>Notary signing services scheduled to begin Winter 2026.</strong>
+                Appointments are not yet available. Thank you for your interest, and please check back for updates! <a href="#notify">Get notified when appointments open.</a>
             </div>
-            <p class="launch-note" data-pre-launch><strong>Opening winter 2026</strong> &mdash; appointments will open once the North Carolina Notary Public commission has been issued.</p>
+            <p class="launch-note" data-pre-launch><strong>Opening winter 2026</strong> </p>
         </div>
     </div>
 
@@ -668,44 +611,42 @@
     <section id="pricing">
         <div class="wrap">
             <p class="eyebrow">Pricing</p>
-            <h2>Simple, Transparent Rates</h2>
-            <p class="section-sub">No hidden fees. You'll know the cost before we meet.</p>
+            <h2>Clear, Transparent Rates</h2>
+            <p class="section-sub">Simple pricing for in-office appointments in Mount Holly and travel fees for mobile visits throughout our NC service area.</p>
 
-            <div class="pricing">
-                <div class="price-card featured">
-                    <div class="price">$10<small> / signature</small></div>
-                    <h3>Notarization Fee</h3>
-                    <p>Flat rate for every notarized signature, for both in-office and mobile appointments. Due at the time of signing.</p>
+            <!-- Base Notarization Fee -->
+            <div class="pricing-hero">
+                <div class="price">$10<small> / signature</small></div>
+                <h3>General Notarizations (In-Office Base Rate)</h3>
+                <p>Standard rate for all in-office notarizations in Mount Holly, NC. Covers Acknowledgments, Jurats, Oaths, Affidavits, and standard notary acts.</p>
+            </div>
+
+            <!-- Travel & Mobile Fees Grid -->
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h4>Mobile Travel / Convenience Fee (Gaston County)</h4>
+                    <div class="fee">$45 <span style="font-size:0.9rem; font-family:var(--sans); color:var(--muted); font-weight:400;">flat fee</span></div>
+                    <p>Flat convenience travel fee for mobile notary appointments located anywhere within Gaston County.</p>
                 </div>
-                <div class="price-card">
-                    <div class="price">$0.76<small> / mile</small></div>
-                    <h3>Mobile Travel Fee</h3>
-                    <p>Charged on roundtrip mileage from Mount Holly, NC. Service area: up to 50 miles, with the signing location in North Carolina. Paid in advance to confirm your appointment.</p>
+
+                <div class="pricing-card">
+                    <h4>Extended Travel Fee (Outside Gaston County)</h4>
+                    <div class="fee">$65 <span style="font-size:0.9rem; font-family:var(--sans); color:var(--muted); font-weight:400;">flat fee</span></div>
+                    <p>Flat travel fee for locations outside Gaston County, anywhere within 50 miles of Mount Holly, NC.</p>
+                </div>
+
+                <div class="pricing-card">
+                    <h4>Specialty Mobile Visits</h4>
+                    <div class="fee">Starting at $125</div>
+                    <p>Specialized mobile visits to Hospitals, Medical Facilities, or Jails. Includes travel and standard document execution.</p>
                 </div>
             </div>
 
-            <div class="estimator" aria-labelledby="est-title">
-                <h3 id="est-title">Estimate Your Mobile Visit</h3>
-                <p class="sub">Enter your distance from Mount Holly and the number of signatures. The travel fee is paid in advance to confirm a mobile appointment.</p>
-                <p class="nc-note"><strong>North Carolina only.</strong> The signing must take place in North Carolina. Notarizations cannot be performed in South Carolina or any other state, even if the address is within 50 miles of Mount Holly.</p>
-
-                <div class="fields">
-                    <div class="field">
-                        <label for="miles">One-way distance (miles)</label>
-                        <input id="miles" type="number" inputmode="decimal" min="0" max="50" step="1" value="15">
-                    </div>
-                    <div class="field">
-                        <label for="sigs">Number of signatures</label>
-                        <input id="sigs" type="number" inputmode="numeric" min="1" step="1" value="1">
-                    </div>
-                </div>
-
-                <div class="result" aria-live="polite">
-                    <div class="total" id="total">$32.80</div>
-                    <div class="break" id="break"></div>
-                    <div class="warn" id="warn" hidden>That's outside the 50-mile service area. Please get in touch to discuss options. (Signings must take place in North Carolina.)</div>
-                </div>
+            <div class="pricing-notice">
+                All travel and convenience fees are always <strong>confirmed with you in writing</strong> before dispatch.
             </div>
+
+            <p class="nc-note"><strong>North Carolina only.</strong> The signing must take place in North Carolina. Notarizations cannot be performed in South Carolina or any other state, even if the address is within 50 miles of Mount Holly.</p>
 
             <div class="payment" id="payment">
                 <h3>Payment Methods &amp; Policy</h3>
@@ -718,8 +659,8 @@
                 </div>
                 <ul class="pay-list">
                     <li><strong>Notarization fee.</strong> The $10 per signature fee is due at the time of signing, for both in-office and mobile appointments.</li>
-                    <li><strong>Travel fee (mobile appointments).</strong> The $0.76 per roundtrip mile travel fee must be paid in advance to confirm your appointment.</li>
-                    <li><strong>Payment details.</strong> Payment instructions are sent with your appointment confirmation.</li>
+                    <li><strong>Travel fee (mobile appointments).</strong> Convenience travel fees ($45 within Gaston County / $65 extended travel) are paid in advance to confirm your appointment.</li>
+                    <li><strong>Payment details.</strong> Complete payment instructions are provided alongside your written confirmation.</li>
                     <li><strong>Please note.</strong> Cash is not accepted.</li>
                 </ul>
             </div>
@@ -740,7 +681,7 @@
                 </div>
                 <div class="step">
                     <h3>Confirm Details</h3>
-                    <p>You'll receive a confirmation and a total cost estimate. For mobile appointments, the travel fee is paid in advance to confirm.</p>
+                    <p>You'll receive written confirmation and a total cost quote. For mobile appointments, travel fees are paid in advance to confirm.</p>
                 </div>
                 <div class="step">
                     <h3>Bring Valid ID</h3>
@@ -768,11 +709,11 @@
             <div class="faq">
                 <details>
                     <summary>How much does a notary cost in Mount Holly, NC?</summary>
-                    <p>The notarization fee is a flat $10 per signature. Mobile appointments add a travel fee of $0.76 per roundtrip mile from Mount Holly. In-office appointments have no travel fee.</p>
+                    <p>In-office notarizations are a flat $10 per signature. Mobile appointments add a flat travel fee of $45 for Gaston County or $65 for extended travel within 50 miles in NC. Specialty hospital or jail visits start at $125.</p>
                 </details>
                 <details>
                     <summary>Do you travel to my home or office?</summary>
-                    <p>Yes. The mobile notary service comes to your home, office, or facility anywhere within 50 miles of Mount Holly, as long as the signing takes place in North Carolina. That includes Gastonia, Charlotte, Belmont, Huntersville, Mooresville, Lincolnton, Concord, Monroe, Shelby, and many other nearby towns.</p>
+                    <p>Yes. Mobile notary services come to your home, office, or facility anywhere within 50 miles of Mount Holly, as long as the signing takes place in North Carolina. That includes Gastonia, Charlotte, Belmont, Huntersville, Mooresville, Lincolnton, Concord, Monroe, Shelby, and surrounding areas.</p>
                 </details>
                 <details>
                     <summary>What do I need to bring to a notary appointment?</summary>
@@ -788,7 +729,7 @@
                 </details>
                 <details>
                     <summary>How do I pay?</summary>
-                    <p>I accept PayPal, Venmo, Cash App, and Zelle. Cash is not accepted. The notarization fee is due at the time of signing. For mobile appointments, the travel fee is paid in advance to confirm the appointment.</p>
+                    <p>I accept Cash, PayPal, Venmo, Cash App, and Zelle. The notarization fee is due at the time of signing. For mobile appointments, travel fees are paid in advance to confirm the appointment.</p>
                 </details>
                 <details>
                     <summary>When are you available?</summary>
@@ -796,7 +737,7 @@
                 </details>
                 <details>
                     <summary>Do you offer online or remote notarization?</summary>
-                    <p>Not yet. Electronic and remote notarizations are planned for early 2027, once the required training is complete.</p>
+                    <p>Not yet. Electronic and remote notarizations are planned for early 2027!</p>
                 </details>
             </div>
         </div>
@@ -807,17 +748,17 @@
         <div class="wrap">
             <p class="eyebrow">Appointments</p>
             <h2>Request an Appointment</h2>
-            <p class="section-sub">Choose the date and time you'd like. This is a request, and your appointment is confirmed once I reply. For mobile appointments, the travel fee is paid in advance to confirm.</p>
+            <p class="section-sub">Choose the date and time you'd like. This is a request, and your appointment is confirmed once I reply. For mobile appointments, travel fees are confirmed in writing and paid in advance.</p>
 
             <form class="notify-form book-form" id="bookForm" action="https://formspree.io/f/mnppykod" method="POST" novalidate>
                 <div class="choice-row" role="radiogroup" aria-label="Appointment type">
                     <label class="choice">
                         <input type="radio" name="service" value="In-office (Mount Holly)" checked>
-                        <div><strong>In-Office</strong><span>Meet in Mount Holly. No travel fee.</span></div>
+                        <div><strong>In-Office</strong><span>Meet in Mount Holly. $10/signature, no travel fee.</span></div>
                     </label>
                     <label class="choice">
                         <input type="radio" name="service" value="Mobile (travel to client)">
-                        <div><strong>Mobile</strong><span>I come to you, within 50 miles and in North Carolina.</span></div>
+                        <div><strong>Mobile</strong><span>I come to you within 50 miles in NC. Flat travel fee applies.</span></div>
                     </label>
                 </div>
 
@@ -868,8 +809,12 @@
                             <input id="bCity" name="city" type="text" autocomplete="address-level2" maxlength="80">
                         </div>
                         <div class="field">
-                            <label for="bMiles">Approx. one-way miles from Mount Holly</label>
-                            <input id="bMiles" name="one_way_miles" type="number" inputmode="decimal" min="0" max="50" step="1">
+                            <label for="bCounty">County</label>
+                            <select id="bCounty" name="county">
+                                <option value="Gaston">Gaston County ($45 flat travel)</option>
+                                <option value="Other">Outside Gaston County ($65 flat travel)</option>
+                                <option value="Specialty">Hospital / Medical / Jail (Starting at $125)</option>
+                            </select>
                         </div>
                     </div>
                     <label class="consent">
@@ -897,7 +842,7 @@
 
                 <label class="consent">
                     <input type="checkbox" id="bConsent" name="consent" required>
-                    <span>I understand this is a request, not a confirmed appointment, and I agree to be contacted about it. For mobile appointments, I understand the travel fee must be paid in advance to confirm.</span>
+                    <span>I understand this is a request, not a confirmed appointment, and I agree to be contacted about it. For mobile appointments, I understand travel fees are confirmed in writing and paid in advance.</span>
                 </label>
 
                 <button type="submit" class="btn btn-primary" id="bSubmit" style="width:100%;margin-top:18px;">Request Appointment</button>
@@ -955,7 +900,7 @@
         <div class="wrap">
             <p class="eyebrow" data-pre-launch>Appointments</p>
             <h2 data-pre-launch>Booking Opens Winter 2026</h2>
-            <p class="section-sub" data-pre-launch>Appointment booking is coming soon and is not yet available. Notary appointments will open once the North Carolina Notary Public commission has been issued.</p>
+            <p class="section-sub" data-pre-launch>Appointment booking is coming soon!</p>
             <p class="eyebrow" data-post-launch hidden>Contact</p>
             <h2 data-post-launch hidden>Questions? Get in Touch</h2>
             <p class="section-sub" data-post-launch hidden>Call, text, or email with general questions. To book, use the <a href="#book" style="color:var(--gold)">appointment request form</a>.</p>
@@ -1081,7 +1026,7 @@
         if (!form || !C) { return; }
 
         var ENDPOINT = 'https://formspree.io/f/mnppykod';
-        var RATE = 0.76, FEE = 10, MAX_MILES = 50;
+        var FEE = 10;
         var $ = function (id) { return document.getElementById(id); };
         var dateEl = $('bDate'), timeEl = $('bTime'), statusEl = $('bStatus'), submitBtn = $('bSubmit');
         var mobileBox = $('bMobile'), est = $('bEst');
@@ -1137,11 +1082,13 @@
             var s = Math.max(1, Math.floor(parseFloat($('bSigs').value)) || 1);
             var html = 'Estimated notarization fee (due at signing): <strong>' + money(s * FEE) + '</strong>';
             if (isMobile()) {
-                var m = parseFloat($('bMiles').value);
-                if (m >= 0 && m <= MAX_MILES) {
-                    html += '<br>Estimated travel fee (due in advance to confirm): <strong>' + money(m * 2 * RATE) + '</strong>';
-                } else {
-                    html += '<br>Travel fee: $0.76 per roundtrip mile, paid in advance to confirm. Enter your approximate distance for an estimate.';
+                var c = $('bCounty').value;
+                if (c === 'Gaston') {
+                    html += '<br>Estimated travel fee (due in advance to confirm): <strong>$45.00</strong> (Gaston County flat rate)';
+                } else if (c === 'Other') {
+                    html += '<br>Estimated travel fee (due in advance to confirm): <strong>$65.00</strong> (Extended NC travel flat rate)';
+                } else if (c === 'Specialty') {
+                    html += '<br>Estimated specialty visit (due in advance to confirm): <strong>Starting at $125.00</strong> (Includes travel &amp; standard execution)';
                 }
             }
             est.innerHTML = html;
@@ -1153,7 +1100,7 @@
         dateEl.addEventListener('input', fillTimes);
         dateEl.addEventListener('change', fillTimes);
         $('bSigs').addEventListener('input', updateEst);
-        $('bMiles').addEventListener('input', updateEst);
+        if ($('bCounty')) { $('bCounty').addEventListener('change', updateEst); }
         fillTimes();
         syncService();
 
@@ -1187,14 +1134,13 @@
             if (problem) { return fail(dateEl, problem); }
             if (!time) { return fail(timeEl, 'Please choose a start time.'); }
 
-            var address = '', city = '', miles = NaN;
+            var address = '', city = '', county = 'Gaston';
             if (mobile) {
                 address = $('bAddress').value.trim();
                 city = $('bCity').value.trim();
-                miles = parseFloat($('bMiles').value);
+                county = $('bCounty').value;
                 if (!address) { return fail($('bAddress'), 'Please enter the signing address.'); }
                 if (!city) { return fail($('bCity'), 'Please enter the city.'); }
-                if (!(miles >= 0) || miles > MAX_MILES) { return fail($('bMiles'), 'Mobile service is available within ' + MAX_MILES + ' miles of Mount Holly. Please enter your approximate one-way distance.'); }
                 if (!$('bNC').checked) { return fail(null, 'Mobile appointments are only available for signings located in North Carolina. Please check the box to confirm.'); }
             }
             if (!$('bConsent').checked) { return fail(null, 'Please check the box to confirm you understand and agree.'); }
@@ -1213,10 +1159,13 @@
             data.append('requested_time', timeText);
             data.append('estimated_notarization_fee', money(sigs * FEE));
             if (mobile) {
+                var travelFeeStr = '$45.00 (Gaston County)';
+                if (county === 'Other') { travelFeeStr = '$65.00 (Outside Gaston County)'; }
+                else if (county === 'Specialty') { travelFeeStr = 'Starting at $125.00 (Specialty visit)'; }
+
                 data.append('signing_address', address + ', ' + city + ', NC');
-                data.append('one_way_miles', String(miles));
-                data.append('roundtrip_miles', String(miles * 2));
-                data.append('estimated_travel_fee_due_in_advance', money(miles * 2 * RATE));
+                data.append('county_tier', county);
+                data.append('estimated_travel_fee_due_in_advance', travelFeeStr);
                 data.append('signing_in_nc', 'Yes');
             }
             data.append('documents', $('bDocs').value.trim());
@@ -1249,33 +1198,6 @@
             msg.hidden = false;
             btn.setAttribute('aria-expanded', 'true');
         });
-    })();
-
-    (function () {
-        var RATE = 0.76, FEE = 10, MAX = 50;
-        var miles = document.getElementById('miles');
-        var sigs = document.getElementById('sigs');
-        var total = document.getElementById('total');
-        var brk = document.getElementById('break');
-        var warn = document.getElementById('warn');
-
-        function money(n) { return '$' + n.toFixed(2); }
-
-        function update() {
-            var m = Math.max(0, parseFloat(miles.value) || 0);
-            var s = Math.max(1, Math.floor(parseFloat(sigs.value)) || 1);
-            var rt = m * 2;
-            var travel = rt * RATE;
-            var notary = s * FEE;
-            total.textContent = money(notary + travel);
-            brk.textContent = s + ' signature' + (s > 1 ? 's' : '') + ' (' + money(notary) + ') + ' +
-                rt.toFixed(rt % 1 ? 1 : 0) + ' roundtrip miles (' + money(travel) + ')';
-            warn.hidden = m <= MAX;
-        }
-
-        miles.addEventListener('input', update);
-        sigs.addEventListener('input', update);
-        update();
     })();
 </script>
 
