@@ -143,6 +143,22 @@ button.btn { -webkit-appearance: none; appearance: none; line-height: inherit; }
 }
 .launch-note strong { color: var(--text); font-weight: 500; }
 
+.cert-banner {
+    margin-top: 22px;
+    text-align: center;
+}
+.cert-banner a {
+    display: inline-block;
+    line-height: 0;
+}
+.cert-banner img {
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border: 0;
+}
+
 /* ---------- Sections ---------- */
 section { padding: 72px 0; }
 section.alt { background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
