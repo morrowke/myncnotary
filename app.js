@@ -3,7 +3,7 @@
 // request form and hides the "coming soon" and "Get Notified" pieces of the page.
 window.BOOKING = {
     open: true,
-    earliestDate: '2026-11-19                          // optional first bookable date, 'YYYY-MM-DD'
+    earliestDate: '2026-11-19',                        // optional first bookable date, 'YYYY-MM-DD'
     minLeadDays: 0,                                    // days of notice you need
     maxAdvanceDays: 60,                                // how far ahead people can book
     blockedDates: [],                                  // e.g. ['2026-12-25', '2027-01-01']
