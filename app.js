@@ -3,13 +3,13 @@
 // request form and hides the "coming soon" and "Get Notified" pieces of the page.
 window.BOOKING = {
     open: true,
-    earliestDate: '',                                  // optional first bookable date, 'YYYY-MM-DD'
-    minLeadDays: 2,                                    // days of notice you need
+    earliestDate: 2026-11-19,                                  // optional first bookable date, 'YYYY-MM-DD'
+    minLeadDays: 0,                                    // days of notice you need
     maxAdvanceDays: 60,                                // how far ahead people can book
     blockedDates: [],                                  // e.g. ['2026-12-25', '2027-01-01']
     stepMinutes: 30,                                   // spacing between start times
-    weekday: { start: '17:00', lastStart: '21:00' },   // Mon-Fri, 24-hour clock
-    weekend: { start: '08:00', lastStart: '21:00' }    // Sat-Sun, 24-hour clock
+    weekday: { start: '16:30', lastStart: '22:00' },   // Mon-Fri, 24-hour clock
+    weekend: { start: '07:00', lastStart: '22:00' }    // Sat-Sun, 24-hour clock
 };
 
 (function () {
@@ -147,9 +147,9 @@ window.BOOKING = {
         if (isMobile()) {
             var c = $('bCounty').value;
             if (c === 'Gaston') {
-                html += '<br>Estimated travel fee (due in advance to confirm): <strong>$45.00</strong> (Gaston County flat rate)';
+                html += '<br>Estimated travel fee (due in advance to confirm): <strong>$25.00</strong> (Gaston County flat rate)';
             } else if (c === 'Other') {
-                html += '<br>Estimated travel fee (due in advance to confirm): <strong>$65.00</strong> (Extended NC travel flat rate)';
+                html += '<br>Estimated travel fee (due in advance to confirm): <strong>$45.00</strong> (Extended NC travel flat rate)';
             } else if (c === 'Specialty') {
                 html += '<br>Estimated specialty visit (due in advance to confirm): <strong>Starting at $125.00</strong> (Includes travel &amp; standard execution)';
             }
@@ -222,8 +222,8 @@ window.BOOKING = {
         data.append('requested_time', timeText);
         data.append('estimated_notarization_fee', money(sigs * FEE));
         if (mobile) {
-            var travelFeeStr = '$45.00 (Gaston County)';
-            if (county === 'Other') { travelFeeStr = '$65.00 (Outside Gaston County)'; }
+            var travelFeeStr = '$25.00 (Gaston County)';
+            if (county === 'Other') { travelFeeStr = '$45.00 (Outside Gaston County)'; }
             else if (county === 'Specialty') { travelFeeStr = 'Starting at $125.00 (Specialty visit)'; }
 
             data.append('signing_address', address + ', ' + city + ', NC');
