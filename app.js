@@ -2,7 +2,7 @@
 // Set open to true once your commission is issued. That turns on the appointment
 // request form and hides the "coming soon" and "Get Notified" pieces of the page.
 window.BOOKING = {
-    open: false,
+    open: true,
     earliestDate: '',                                  // optional first bookable date, 'YYYY-MM-DD'
     minLeadDays: 2,                                    // days of notice you need
     maxAdvanceDays: 60,                                // how far ahead people can book

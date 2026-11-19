@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mobile Notary Public in Mount Holly, NC | MyNCNotary, LLC</title>
-    <meta name="description" content="Veteran-owned and locally operated mobile and in-office notary public serving Mount Holly, Gastonia, Charlotte and nearby NC. Flat $10 per signature.">
+    <meta name="description" content="Veteran-owned and locally operated mobile and in-office notary public serving Mount Holly, Gastonia, Charlotte and nearby NC. Flat $10 per signature. Now accepting appointments.">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <link rel="canonical" href="https://myncnotary.com/">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="theme-color" content="#0b1220">
     <meta property="og:title" content="Mobile Notary Public in Mount Holly, NC | MyNCNotary, LLC">
-    <meta property="og:description" content="Veteran-owned and locally operated mobile and in-office notary services within 50 miles of Mount Holly, NC. Flat $10 per signature.">
+    <meta property="og:description" content="Veteran-owned and locally operated mobile and in-office notary services within 50 miles of Mount Holly, NC. Flat $10 per signature. Book an appointment today.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://myncnotary.com/">
     <meta property="og:site_name" content="MyNCNotary, LLC">
@@ -103,7 +103,7 @@
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
-          "price": "45.00",
+          "price": "25.00",
           "priceCurrency": "USD"
         }
       },
@@ -116,7 +116,7 @@
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
-          "price": "65.00",
+          "price": "45.00",
           "priceCurrency": "USD"
         }
       },
@@ -160,8 +160,8 @@
             <li><a href="#pricing">Pricing</a></li>
             <li><a href="#how">How It Works</a></li>
             <li><a href="#faq">FAQ</a></li>
-            <li data-pre-launch><a href="#notify">Get Notified</a></li>
-            <li data-post-launch hidden><a href="#book">Book Now</a></li>
+            <li data-pre-launch hidden><a href="#notify">Get Notified</a></li>
+            <li data-post-launch><a href="#book">Book Now</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
@@ -179,19 +179,15 @@
                 <span class="byline">Proudly veteran-owned and locally operated by <strong>Kevin Morrow, II</strong></span>
             </p>
             <div class="btn-row">
-                <button type="button" class="btn btn-primary" id="apptBtn" aria-controls="apptMsg" aria-expanded="false">Request an Appointment</button>
+                <a class="btn btn-primary" href="#book">Request an Appointment</a>
                 <a class="btn btn-ghost" href="#pricing">See Pricing</a>
             </div>
-            <div class="appt-msg" id="apptMsg" role="status" aria-live="polite" hidden>
-                <strong>Notary signing services scheduled to begin Winter 2026.</strong>
-                Appointments are not yet available. Thank you for your interest, and please check back for updates! <a href="#notify">Get notified when appointments open.</a>
-            </div>
-            <p class="launch-note" data-pre-launch><strong>Opening Late November 2026</strong></p>
+            <p class="launch-note"><strong>Now Accepting Appointments</strong></p>
             <div class="cert-banner">
-    			<a href="https://locallyownedandoperated.org/" target="_blank" rel="nofollow noopener noreferrer">
-        			<img src="banner-dark.png" width="250" height="44" alt="American Operator's Locally Owned and Operated Certification">
-    			</a>
-			</div>
+                <a href="https://locallyownedandoperated.org/" target="_blank" rel="nofollow noopener noreferrer">
+                    <img src="banner-dark.png" width="250" height="44" alt="American Operator's Locally Owned and Operated Certification">
+                </a>
+            </div>
         </div>
     </div>
 
@@ -360,7 +356,7 @@
             <div class="steps">
                 <div class="step">
                     <h3>Reach Out</h3>
-                    <p><span data-pre-launch>Email your request with the document type, location, and preferred time.</span><span data-post-launch hidden>Submit the request form with your preferred date, time, and location.</span></p>
+                    <p><span data-pre-launch hidden>Email your request with the document type, location, and preferred time.</span><span data-post-launch>Submit the request form with your preferred date, time, and location.</span></p>
                 </div>
                 <div class="step">
                     <h3>Confirm Details</h3>
@@ -430,8 +426,8 @@
         </div>
     </section>
 
-    <!-- REQUEST AN APPOINTMENT (hidden until BOOKING.open is true) -->
-    <section id="book" class="alt" data-post-launch hidden>
+    <!-- REQUEST AN APPOINTMENT -->
+    <section id="book" class="alt" data-post-launch>
         <div class="wrap">
             <p class="eyebrow">Appointments</p>
             <h2>Request an Appointment</h2>
@@ -498,8 +494,8 @@
                         <div class="field">
                             <label for="bCounty">County</label>
                             <select id="bCounty" name="county">
-                                <option value="Gaston">Gaston County ($45 flat travel)</option>
-                                <option value="Other">Outside Gaston County ($65 flat travel)</option>
+                                <option value="Gaston">Gaston County ($25 flat travel)</option>
+                                <option value="Other">Outside Gaston County ($45 flat travel)</option>
                                 <option value="Specialty">Hospital / Medical / Jail (Starting at $125)</option>
                             </select>
                         </div>
@@ -540,8 +536,8 @@
         </div>
     </section>
 
-    <!-- GET NOTIFIED -->
-    <section id="notify" class="alt" data-pre-launch>
+    <!-- GET NOTIFIED (hidden post-launch) -->
+    <section id="notify" class="alt" data-pre-launch hidden>
         <div class="wrap">
             <p class="eyebrow">Stay Informed</p>
             <h2>Get Notified at Launch</h2>
@@ -585,25 +581,25 @@
     <!-- CONTACT -->
     <section id="contact">
         <div class="wrap">
-            <p class="eyebrow" data-pre-launch>Appointments</p>
-            <h2 data-pre-launch>Booking Opens Winter 2026</h2>
-            <p class="section-sub" data-pre-launch>Appointment booking is coming soon!</p>
-            <p class="eyebrow" data-post-launch hidden>Contact</p>
-            <h2 data-post-launch hidden>Questions? Get in Touch</h2>
-            <p class="section-sub" data-post-launch hidden>Call, text, or email with general questions. To book, use the <a href="#book" class="gold-link">appointment request form</a>.</p>
+            <p class="eyebrow" data-pre-launch hidden>Appointments</p>
+            <h2 data-pre-launch hidden>Booking Opens Winter 2026</h2>
+            <p class="section-sub" data-pre-launch hidden>Appointment booking is coming soon!</p>
+            <p class="eyebrow" data-post-launch>Contact</p>
+            <h2 data-post-launch>Questions? Get in Touch</h2>
+            <p class="section-sub" data-post-launch>Call, text, or email with general questions. To book, use the <a href="#book" class="gold-link">appointment request form</a>.</p>
 
-            <div class="contact-box" data-pre-launch>
+            <div class="contact-box" data-pre-launch hidden>
                 <p>Want to be first to know when appointments open? Sign up for a launch notification and I'll contact you as soon as booking begins.</p>
                 <a class="btn btn-primary" href="#notify">Get Notified at Launch</a>
             </div>
 
             <div class="general-contact">
-                <p data-pre-launch>General questions in the meantime?</p>
+                <p data-pre-launch hidden>General questions in the meantime?</p>
                 <p>
                     <a href="tel:+19802913713">(980) 291-3713</a> &bull;
                     <a href="mailto:info@myncnotary.com?subject=General%20Question">info@myncnotary.com</a>
                 </p>
-                <p class="small" data-pre-launch>Please note that appointments cannot be scheduled until services begin.</p>
+                <p class="small" data-pre-launch hidden>Please note that appointments cannot be scheduled until services begin.</p>
             </div>
         </div>
     </section>
